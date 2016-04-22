@@ -1,7 +1,7 @@
 #! /usr/bin/env python2.7
 
 '''
-Take what you can, give nothing back.
+/dev/null -- Take what you can, give nothing back.
 '''
 
 from flask import Flask, request
