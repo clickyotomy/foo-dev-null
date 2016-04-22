@@ -1,0 +1,43 @@
+/dev/null
+---------
+Why not write to /dev/null? It's fast as hell.
+
+```ShellSession
+
+$ curl -X "GET" http://127.0.0.1:8080/dev/null -vvv
+*   Trying 127.0.0.1...
+* Connected to 127.0.0.1 (127.0.0.1) port 8080 (#0)
+> GET /dev/null HTTP/1.1
+> Host: 127.0.0.1:8080
+> User-Agent: curl/7.43.0
+> Accept: */*
+>
+* HTTP 1.0, assume close after body
+< HTTP/1.0 204 NO CONTENT
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 0
+< Server: Werkzeug/0.11.8 Python/2.7.11
+< Date: Fri, 22 Apr 2016 13:57:49 GMT
+<
+* Closing connection 0
+```
+
+```ShellSession
+
+$ curl -X "POST" http://127.0.0.1:8080/dev/null -vvv
+*   Trying 127.0.0.1...
+* Connected to 127.0.0.1 (127.0.0.1) port 8080 (#0)
+> POST /dev/null HTTP/1.1
+> Host: 127.0.0.1:8080
+> User-Agent: curl/7.43.0
+> Accept: */*
+>
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 0
+< Server: Werkzeug/0.11.8 Python/2.7.11
+< Date: Fri, 22 Apr 2016 13:59:05 GMT
+<
+* Closing connection 0
+```
