@@ -2,7 +2,6 @@
 ---------
 Why not write to /dev/null? It's fast as hell.
 
-```ShellSession
 
 $ curl -X "GET" http://127.0.0.1:8080/dev/null -vvv
 *   Trying 127.0.0.1...
@@ -20,9 +19,8 @@ $ curl -X "GET" http://127.0.0.1:8080/dev/null -vvv
 < Date: Fri, 22 Apr 2016 13:57:49 GMT
 <
 * Closing connection 0
-```
 
-```ShellSession
+-----------------------------------------------------
 
 $ curl -X "POST" http://127.0.0.1:8080/dev/null -vvv
 *   Trying 127.0.0.1...
@@ -40,4 +38,3 @@ $ curl -X "POST" http://127.0.0.1:8080/dev/null -vvv
 < Date: Fri, 22 Apr 2016 13:59:05 GMT
 <
 * Closing connection 0
-```
