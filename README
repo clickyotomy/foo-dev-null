@@ -46,3 +46,5 @@ $ curl -X "POST" "https://foo-dev-null.herokuapp.com/dev/null" -vvv             
 < Via: 1.1 vegur
 <
 * Connection #0 to host foo-dev-null.herokuapp.com left intact
+
+Inspired from https://devnull-as-a-service.com/.
