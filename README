@@ -2,39 +2,47 @@
 ---------
 Why not write to /dev/null? It's fast as hell.
 
-
-$ curl -X "GET" http://127.0.0.1:8080/dev/null -vvv
-*   Trying 127.0.0.1...
-* Connected to 127.0.0.1 (127.0.0.1) port 8080 (#0)
+$ curl -X "GET" "https://foo-dev-null.herokuapp.com/dev/null" -vvv
+*   Trying 54.243.242.176...
+* Connected to foo-dev-null.herokuapp.com (54.243.242.176) port 443 (#0)
+* TLS 1.2 connection using TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+* Server certificate: *.herokuapp.com
+* Server certificate: DigiCert SHA2 High Assurance Server CA
+* Server certificate: DigiCert High Assurance EV Root CA
 > GET /dev/null HTTP/1.1
-> Host: 127.0.0.1:8080
+> Host: foo-dev-null.herokuapp.com
 > User-Agent: curl/7.43.0
 > Accept: */*
 >
-* HTTP 1.0, assume close after body
-< HTTP/1.0 204 NO CONTENT
+< HTTP/1.1 204 NO CONTENT
+< Connection: keep-alive
+< Server: gunicorn/19.4.5
+< Date: Sat, 23 Apr 2016 04:45:04 GMT
 < Content-Type: text/html; charset=utf-8
 < Content-Length: 0
-< Server: Werkzeug/0.11.8 Python/2.7.11
-< Date: Fri, 22 Apr 2016 13:57:49 GMT
+< Via: 1.1 vegur
 <
-* Closing connection 0
+* Connection #0 to host foo-dev-null.herokuapp.com left intact
 
------------------------------------------------------
+--------------------------------------------------------------------------------
 
-$ curl -X "POST" http://127.0.0.1:8080/dev/null -vvv
-*   Trying 127.0.0.1...
-* Connected to 127.0.0.1 (127.0.0.1) port 8080 (#0)
+$ curl -X "POST" "https://foo-dev-null.herokuapp.com/dev/null" -vvv                                                                                          *   Trying 54.243.242.176...
+* Connected to foo-dev-null.herokuapp.com (54.243.242.176) port 443 (#0)
+* TLS 1.2 connection using TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+* Server certificate: *.herokuapp.com
+* Server certificate: DigiCert SHA2 High Assurance Server CA
+* Server certificate: DigiCert High Assurance EV Root CA
 > POST /dev/null HTTP/1.1
-> Host: 127.0.0.1:8080
+> Host: foo-dev-null.herokuapp.com
 > User-Agent: curl/7.43.0
 > Accept: */*
 >
-* HTTP 1.0, assume close after body
-< HTTP/1.0 200 OK
+< HTTP/1.1 200 OK
+< Connection: keep-alive
+< Server: gunicorn/19.4.5
+< Date: Sat, 23 Apr 2016 04:45:17 GMT
 < Content-Type: text/html; charset=utf-8
 < Content-Length: 0
-< Server: Werkzeug/0.11.8 Python/2.7.11
-< Date: Fri, 22 Apr 2016 13:59:05 GMT
+< Via: 1.1 vegur
 <
-* Closing connection 0
+* Connection #0 to host foo-dev-null.herokuapp.com left intact
