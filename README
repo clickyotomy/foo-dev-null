@@ -26,7 +26,7 @@ $ curl -X "GET" "https://foo-dev-null.herokuapp.com/dev/null" -vvv
 
 --------------------------------------------------------------------------------
 
-$ curl -X "POST" "https://foo-dev-null.herokuapp.com/dev/null" -vvv                                                                                          *   Trying 54.243.242.176...
+$ curl -X "POST" "https://foo-dev-null.herokuapp.com/dev/null" -vvv                                                                                         *   Trying 54.243.242.176...
 * Connected to foo-dev-null.herokuapp.com (54.243.242.176) port 443 (#0)
 * TLS 1.2 connection using TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
 * Server certificate: *.herokuapp.com
