@@ -1,4 +1,4 @@
-#! /usr/bin/env python2.7
+#! /usr/bin/env python3
 
 '''
 /dev/null -- Take what you can, give nothing back.
@@ -6,16 +6,20 @@
 
 from flask import Flask, request
 
-app = Flask(__name__)
+APP = Flask(__name__)
 
 
-@app.route('/dev/null', methods=['GET', 'POST'])
+@APP.route('/dev/null', methods=['GET', 'POST'])
 def serve():
-    if request.method == 'GET':
-        return ('', 204)
-    if request.method == 'POST':
+    '''
+    This is the default route. Doesn't do anything.
+    '''
+    if request.method in ['POST', 'PUT', 'PATCH', 'DELETE']:
         return ('', 200)
+
+    return ('', 204)
+
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=False)
+    APP.run(host='0.0.0.0', port=8080, debug=False)
