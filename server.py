@@ -6,8 +6,8 @@
 
 from flask import Flask, request, url_for, redirect
 
-APP = Flask(__name__)
-METHODS = [
+app = Flask(__name__)
+methods = [
     "HEAD",
     "GET",
     "OPTIONS",
@@ -20,7 +20,7 @@ METHODS = [
 ]
 
 
-@APP.errorhandler(404)
+@app.errorhandler(404)
 def dev_null_redirect(_):
     """
     Redirect everything to `/dev/null'.
@@ -28,7 +28,7 @@ def dev_null_redirect(_):
     return redirect(url_for("serve"))
 
 
-@APP.route("/dev/null", methods=METHODS)
+@app.route("/dev/null", methods=methods)
 def serve():
     """
     This is the default route. Doesn't do anything.
@@ -40,4 +40,4 @@ def serve():
 
 
 if __name__ == "__main__":
-    APP.run(host="0.0.0.0", port=8080, debug=False)
+    app.run(host="0.0.0.0", port=8080, debug=False)
